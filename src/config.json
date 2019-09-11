@@ -1,0 +1,22 @@
+{
+  "name": "XML",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.0",
+  "description": "XML Utils",
+  "methods": [
+    {
+      "name": "parse",
+      "viewName": "Parse XML",
+      "params": [
+        {
+          "name": "xmlPath",
+          "viewName": "XML File path",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
