@@ -1,6 +1,6 @@
 const { readFile } = require("fs/promises");
 const path = require("path");
-const xml2js = require("xml2js");
+const { xml2json } = require("xml-js");
 const { bootstrap } = require("@kaholo/plugin-library");
 
 const { pathExists } = require("./helpers");
@@ -15,10 +15,8 @@ async function parse(params) {
     throw new Error(`Path ${xmlPath} does not exist on agent!`);
   }
 
-  const parser = new xml2js.Parser();
   const fileContent = await readFile(absoluteXmlPath);
-
-  return parser.parseStringPromise(fileContent);
+  return xml2json(fileContent, { compact: true });
 }
 
 module.exports = bootstrap({
