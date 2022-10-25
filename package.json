@@ -9,6 +9,7 @@
   "author": "Kaholo team (Roy Talyosef)",
   "license": "ISC",
   "dependencies": {
+    "@kaholo/plugin-library": "2.1.2",
     "xml2js": "0.4.22"
   },
   "devDependencies": {

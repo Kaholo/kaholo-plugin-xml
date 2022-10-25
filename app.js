@@ -1,14 +1,19 @@
+const { bootstrap } = require("@kaholo/plugin-library");
 const fs = require("fs");
 const xml2js = require("xml2js");
 
-function parse(action) {
+function parse(params) {
+  const {
+    xmlPath,
+  } = params;
+
   return new Promise((resolve, reject) => {
-    if (!action.params.xmlPath) {
+    if (!xmlPath) {
       reject(new Error("XML file path must be specified"));
     }
 
     const parser = new xml2js.Parser();
-    fs.readFile(action.params.xmlPath, (readError, data) => {
+    fs.readFile(xmlPath, (readError, data) => {
       if (readError) {
         reject(readError);
       }
@@ -24,6 +29,6 @@ function parse(action) {
   });
 }
 
-module.exports = {
+module.exports = bootstrap({
   parse,
-};
+});
