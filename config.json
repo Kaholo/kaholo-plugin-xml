@@ -13,8 +13,10 @@
       "params": [
         {
           "name": "xmlPath",
-          "viewName": "XML File path",
-          "type": "string"
+          "viewName": "XML File Path",
+          "type": "string",
+          "required": true,
+          "placeholder": "/twiddlebug/workspace/doc.xml"
         }
       ]
     }

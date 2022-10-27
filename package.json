@@ -1,0 +1,20 @@
+{
+  "name": "kaholo-plugin-xml",
+  "description": "XML plugin for Kaholo",
+  "main": "app.js",
+  "scripts": {
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix"
+  },
+  "author": "Kaholo team (Roy Talyosef)",
+  "license": "ISC",
+  "dependencies": {
+    "@kaholo/plugin-library": "2.1.2",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "eslint": "8.8.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4"
+  }
+}
