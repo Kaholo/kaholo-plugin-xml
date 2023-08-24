@@ -10,12 +10,7 @@ async function parse(params) {
     xmlPath,
   } = params;
 
-  const absoluteXmlPath = path.resolve(xmlPath);
-  if (!await pathExists(absoluteXmlPath)) {
-    throw new Error(`Path ${xmlPath} does not exist on agent!`);
-  }
-
-  const fileContent = await readFile(absoluteXmlPath);
+  const fileContent = await readFile(xmlPath.absolutePath);
   return xml2json(fileContent, { compact: true });
 }
 
