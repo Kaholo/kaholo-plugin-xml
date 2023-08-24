@@ -15,8 +15,15 @@
           "name": "xmlPath",
           "viewName": "XML File Path",
           "type": "string",
+          "parserType": "filePath",
+          "parserOptions": {
+            "throwIfDoesntExist": true,
+            "acceptedTypes": [
+              "file"
+            ]
+          },
           "required": true,
-          "placeholder": "/twiddlebug/workspace/doc.xml"
+          "placeholder": "doc.xml"
         }
       ]
     }
