@@ -1,0 +1,31 @@
+{
+  "name": "XML",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.1",
+  "description": "XML Utils",
+  "methods": [
+    {
+      "name": "parse",
+      "viewName": "Parse XML",
+      "params": [
+        {
+          "name": "xmlPath",
+          "viewName": "XML File Path",
+          "type": "string",
+          "parserType": "filePath",
+          "parserOptions": {
+            "throwIfDoesntExist": true,
+            "acceptedTypes": [
+              "file"
+            ]
+          },
+          "required": true,
+          "placeholder": "doc.xml"
+        }
+      ]
+    }
+  ]
+}
