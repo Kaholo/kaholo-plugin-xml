@@ -5,7 +5,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "logo.png",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse XML into JSON Object",
   "category": [
     "Basic Tools"
@@ -28,7 +28,7 @@
         {
           "name": "xmlPath",
           "viewName": "XML File Path",
-          "description": "Relative or Absolute path to XML file on the Kaholo agent",
+          "description": "Relative or absolute path to XML file on the Kaholo agent",
           "type": "string",
           "parserType": "filePath",
           "parserOptions": {
